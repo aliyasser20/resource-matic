@@ -11,7 +11,7 @@ export const resources = (searchText) => {
 
   searchText = searchText.trim();
   if (new URL(window.location).pathname !== "/home") {
-    window.location = `/home?search=${searchText}`;
+    window.location = `/home?search=${encodeURIComponent(searchText)}`;
   } else {
 
     // TODO: Cancel loading feed
